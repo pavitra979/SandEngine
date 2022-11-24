@@ -1,1 +1,2 @@
 # SandEngine
+SandEngineApp, a MATLAB based Application, is a part of the manuscript "A holistic framework for the evaluation of coastal protection schemes through Integration of hydro-morphodynamic modelling and Artificial Intelligence into the Sand Engine App" submitted to the Journal Environmental Modelling and Software for peer review. The application is yet to be reviewed. Suggested changes from the journal reviewers will be committed to this repository. Details of application can be found in Description.txt file. Installation process is demonstrated in Video1.mp4 files.
