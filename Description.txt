@@ -1,0 +1,39 @@
+------------------------------------------------------------------------------------------
+Description of Sand Engine Application
+------------------------------------------------------------------------------------------
+
+The Sand Engine Application is designed as a part of the project: "Engineering with Nature: combining Artificial intelligence, Remote sensing and computer Models for the optimum design of coastal protection schemes (EP/V056042/1)". This application is published along with the manuscript "A holistic framework for the evaluation of coastal protection schemes through Integration of hydro-morphodynamical modelling and Artificial Intelligence into the Sand Engine App" with Pavitra Kumar and Nicoletta Leonardi as authors affiliated to University of Liverpool, UK. 
+ 
+Prerequisite toolbox: Deep Learning Toolbox
+If Deep Learning Toolbox is not already installed, the application will open but will be bombarded with loads of errors. This toolbox can be found in MATLAB Add-ons (Home > Add-Ons > Get Add-Ons), by searching the exact name of the toolbox. This toolbox is generally included with the licence of MATLAB. The step-by-step installation guide is shown in the included video.
+
+Application contains four panels which are described as follows:
+
+Configuration panel
+-------------------
+This panel contains all the inputs required for prediction of effects of sand engines. First three inputs (i.e., Height of sand engine, Radius of sand engine and wave height) are mandatory, however, any two of the last three inputs can be skipped using the NA checkbox. Application finds suitable values for skipped inputs from the database. Panel contains the description of range of data on which ANN models are trained. Models are trained on the data obtained from 552 simulations of sand engines implemented along the Morecambe Bay coastline with different configurations: Height of sand engine (0.5, 1, 2, and 3m), Radius of sand engine (0.5, 1.5, and 2km) and wave height at the boundary (0.5 and 1m). All the implemented sand engines with different radius can be viewed in the readme section of the application. 
+
+Output Panel
+------------
+This panel contains the options to select the output variables (Water Depth, Significant Wave Height and Sediment Transport) to view the effect of sand engines on. It also contains a mean-maximum switch which can be toggled to view the mean and maximum effect of sand engine on the selected output variables.
+
+ANN Panel
+---------
+This panel displays the prediction results in table and plots for the selected output variables. 12 ensemble models (consisting a total of 96 individual ANN models) are trained to predict 24 outputs (i.e., 2 types (mean and maximum) x 3 output variables x 2 locations (inside and outside) x 2 conditions (with and without sand engine)), with each model predicting two outputs.
+
+Simulation Panel
+----------------
+This panel displays the similar simulated results with configuration best matching with the input configuration, as displayed in the table in this panel. The simulated effects of sand engine are plotted in similar fashion of ANN results plots. Also, this panel contains a map which displays the exact location of simulated sand engine along Morecambe Bay coastline. It is displayed in the form of rings of observation points, placed for recording the simulated data, inside and outside the sand engine. The effect of sand engine at all the observation points can be plotted with "Plot all Observation Points" push button. 
+
+
+Predicted and simulated results can be exported in excel file with "Export to Excel" push button.
+
+
+Lagging
+-------
+Running the application for the first time may observe some delay. This is so because application contains lots of axes and map panels which take their own loading time. However, map panel is disabled by default to speed up the booting process. Some delay is observed in closing the application, which is because of the panel map services. Playing with the map in the panel delays the further action of application. It is recommended to play with the pop-out maps (the exact panel map can be popped-out into separate figure, which is faster and easy to interact).
+
+
+Disclaimer
+----------
+The University of Liverpool (as part of the ENARM project) and the authors provide these App and data "as-is" for a quick reference, but assume no legal liability or responsibility resulting from the use of this information. No legal liability or responsibility resulting from the use of this information for regulatory, permitting, or other legal purposes are assumed by the authors or by the University of Liverpool. Information about modelling, modelling limitations and methodologies are presented in the supported manuscript. Further information can be obtained by contacting N.Leonardi@liverpool.a.c.uk and pavitra.kumar@liverpool.ac.uk.
